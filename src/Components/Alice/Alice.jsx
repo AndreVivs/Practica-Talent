@@ -3,6 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import axios from 'axios'
 import BotonHomePage from '../GeneralComponents/BotonHomePage';
 
+
 const Alice = () => {
    
         const [minutos, setMinutos] = useState([]);
@@ -26,9 +27,10 @@ const Alice = () => {
   }
 
   const peticionApi = async () =>{
-    await axios.get('http://localhost:5000/product')
+    await axios.get('https://rhisco-89b36-default-rtdb.firebaseio.com/product.json')
     .then(response =>{
       var respuesta = response.data;
+      console.log(respuesta)
       var auxMinutos = [], auxPaises = [];
       respuesta.map(elemento =>{
         auxMinutos.push(elemento.minutos);
@@ -50,6 +52,7 @@ const Alice = () => {
             <div className="App" style={{width:"45%", height: "500px"}}>
             <Bar data={data} options={opciones} />
             </div>
+           
         </Fragment>
      );
 }
