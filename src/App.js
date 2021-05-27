@@ -21,6 +21,7 @@ import HomePage from './Components/Home/HomePage';
 import Karina from './Components/Karina/Karina'
 import Lili from './Components/Lili/Lili';
 import Mariliz from './Components/Mariliz/Mariliz';
+import ExampleTabla from './Components/Alice/ExampleTabla';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Switch>
           <Route path='/Alice'>
             <Alice />
+            <ExampleTabla/>
           </Route>
           <Route path='/Andre'>
             <Andre />

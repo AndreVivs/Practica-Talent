@@ -3,6 +3,7 @@ import { Bar } from 'react-chartjs-2'
 import axios from 'axios'
 import BotonHomePage from '../GeneralComponents/BotonHomePage';
 
+
 const Alice = () => {
    
   const [minutos, setMinutos] = useState([]);
@@ -52,6 +53,7 @@ const Alice = () => {
             <div className="App" style={{width:"45%", height: "500px"}}>
             <Bar data={data} options={opciones} />
             </div>
+           
         </Fragment>
      );
 }
